@@ -1,0 +1,47 @@
+.container{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*头部*/
+.header-container{
+  max-width: 980px;
+}
+.header-logo{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+}
+.hedaer-divider{
+  float: left;
+  height: 40px;
+  margin: 12px 0;
+}
+#header-nav{
+  float: left;
+  margin-left: 20px;
+  border-bottom: none;
+}
+#header-nav li{
+  height: 64px;
+  line-height: 64px;
+  color: #fff;
+  width: 120px;
+  text-align: center;
+}
+.header-xs-nav{
+  position: absolute;
+  right: 0;
+}
+
+/*底部*/
+.footer{
+  text-align: center;
+}
+
+/*主体部分*/
+.main-body{
+  flex: 1;
+}
