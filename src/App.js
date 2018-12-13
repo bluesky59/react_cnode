@@ -9,7 +9,9 @@ class App extends Component {
     return (
       <div className={'container'}>
         <Header/>
-        <RouterIndex/>
+        <div className={'main-body'}>
+          <RouterIndex/>
+        </div>
         <Footer/>
       </div>
     );

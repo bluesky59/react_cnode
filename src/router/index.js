@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
 import Index from '../view/index/index';
 import Book from '../view/book/index';
 import About from '../view/about/index';

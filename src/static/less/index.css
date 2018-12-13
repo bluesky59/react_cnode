@@ -6,9 +6,6 @@
 }
 
 /*头部*/
-.header-container{
-  max-width: 980px;
-}
 .header-logo{
   text-align: center;
   color: #fff;
@@ -31,9 +28,21 @@
   width: 120px;
   text-align: center;
 }
-.header-xs-nav{
+.header-xs-menu{
   position: absolute;
   right: 0;
+}
+#header-xs-nav{
+  background-color: #f0f2f5;
+}
+#header-xs-nav li{
+  height: 36px;
+  line-height: 36px;
+  color: #000;
+  text-align: center;
+}
+#header-xs-nav li:hover{
+  background-color: #1890ff;
 }
 
 /*底部*/
@@ -44,4 +53,26 @@
 /*主体部分*/
 .main-body{
   flex: 1;
+  background-color: #fff;
+}
+.main-nav-warp{
+  padding: 20px 50px;
+}
+#main-nav{
+  color: #000;
+  text-align: center;
+}
+#main-nav .ant-menu-item-selected{
+  border-right: 3px solid #1890ff;
+}
+
+#main-xs-nav{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#main-xs-nav li{
+  flex: 1;
+  text-align: center;
 }
