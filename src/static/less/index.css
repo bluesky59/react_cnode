@@ -3,6 +3,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+}
+img{
+  max-width: 100%;
+  vertical-align: center;
 }
 
 /*头部*/
@@ -75,4 +80,15 @@
 #main-xs-nav li{
   flex: 1;
   text-align: center;
+}
+.main-container{
+  max-width: 980px;
+  margin: 30px auto;
+}
+
+/*覆盖样式*/
+.ant-list-item{
+  padding: 12px 10px 0;
+  display: flex;
+  align-items: center;
 }

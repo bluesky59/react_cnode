@@ -6,7 +6,7 @@ const menuArr = [
   {
     label: '首页',
     icon: 'home',
-    link: '/index',
+    link: '/index/all',
   },
   {
     label: '课程',
