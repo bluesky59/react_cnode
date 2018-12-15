@@ -64,7 +64,7 @@ class Index extends Component {
   queryBaseData() {
     axios.get(`/topics`)
       .then((res)=>{
-        console.log(res.data.data);
+        // console.log(res.data.data);
       })
   }
     render() {

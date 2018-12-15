@@ -92,3 +92,27 @@ img{
   display: flex;
   align-items: center;
 }
+
+/*用户页面*/
+.user-avatar{
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 50%;
+}
+.ant-list-item{
+  line-height: 32px;
+  padding-bottom: 10px;
+}
+.user-nick{
+  margin: 0 10px 0 5px;
+}
+.action-date{
+  margin-left: auto;
+}
+.ant-row div{
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
