@@ -92,6 +92,9 @@ img{
   display: flex;
   align-items: center;
 }
+.ant-menu-item-selected{
+  color: #1890ff !important;
+}
 
 /*用户页面*/
 .user-avatar{
@@ -111,7 +114,7 @@ img{
 .action-date{
   margin-left: auto;
 }
-.ant-row div{
+.user-detail-info .ant-col-md-8{
   text-align: center;
   line-height: 30px;
   margin-bottom: 15px;

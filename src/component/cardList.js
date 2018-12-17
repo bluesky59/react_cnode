@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 
 export default class CardList extends Component {
   render() {
-    const { title, data } = this.props;
+    const { title, data, loading } = this.props;
     return (<Card
       title={title}
       type="inner"
+      loading={loading}
     >
       <List
         itemLayout="horizontal"
