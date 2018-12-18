@@ -10,17 +10,17 @@ function user (state = {
   },
 }, action) {
   switch(action.type){
-    case 'LIST_UPDATE':
+    case 'USER_UPDATE':
       return {
         loading: state.loading,
         data: state.data
       }
-    case 'LIST_UPDATE_SUCCESS':
+    case 'USER_UPDATE_SUCCESS':
       return {
         loading: false,
         data: action.data
       }
-    case 'LIST_UPDATE_ERROR':
+    case 'USER_UPDATE_ERROR':
       return {
         loading: false,
         data: state.data

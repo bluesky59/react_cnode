@@ -13,18 +13,18 @@ class User extends Component {
   getBaseData(username){
     this.props.dispatch((dispatch) => {
       dispatch({
-        type:"LIST_UPDATE"
+        type:"USER_UPDATE"
       });
       axios.get(`/user/${username}`)
         .then((res)=>{
           dispatch({
-            type: 'LIST_UPDATE_SUCCESS',
+            type: 'USER_UPDATE_SUCCESS',
             data: res.data.data,
           })
         })
         .catch(error => {
           dispatch({
-            type: 'LIST_UPDATE_ERROR',
+            type: 'USER_UPDATE_ERROR',
             data: error,
           })
         })

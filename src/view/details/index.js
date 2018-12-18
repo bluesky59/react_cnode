@@ -15,19 +15,19 @@ class Detail extends Component {
     console.log(id);
     this.props.dispatch((dispatch) => {
       dispatch({
-        type:"LIST_UPDATE"
+        type:"DETAILS_UPDATE"
       });
       axios.get(`/topic/${id}`)
         .then((res)=>{
           console.log(res);
           dispatch({
-            type: 'LIST_UPDATE_SUCCESS',
+            type: 'DETAILS_UPDATE_SUCCESS',
             data: res.data.data,
           })
         })
         .catch(error => {
           dispatch({
-            type: 'LIST_UPDATE_ERROR',
+            type: 'DETAILS_UPDATE_ERROR',
             data: error,
           })
         })
@@ -121,4 +121,4 @@ export default connect(state => (state.details))(Detail);
 
 // 疑问：
 // 1、为什么执行两次？
-// 2、this.props为什么是上个页面的值？
+// 2、翻页bug
