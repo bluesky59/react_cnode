@@ -70,13 +70,12 @@ class Index extends Component {
     this.queryBaseData(this.state.page, type);
   }
   shouldComponentUpdate(nextProps, nextState){
-    // console.log(nextProps);  // 问题：执行了两次！！！！
     if (nextProps.match.params.type !== type) {
       type = nextProps.match.params.type;
       this.setState({
         page: 1,
-      })
-      this.queryBaseData(this.state.page, type);
+      });
+      this.queryBaseData(nextState.page, type);
       return false;
     }
     if (this.state.page !== nextState.page) {
@@ -125,13 +124,13 @@ class Index extends Component {
               loading={loading}
               itemLayout="horizontal"
               dataSource={data}
-              pagination = {loading ? '' : {
-                page: page,
-                limit: limit,
+              pagination = {loading ? false : {
+                current: page,
+                pageSize: limit,
                 total: total,
-                onChange: (current => {
+                onChange:((current)=>{
                   this.setState({
-                    page: current,
+                    page: current
                   });
                 })
               }}

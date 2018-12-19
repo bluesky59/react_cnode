@@ -6,20 +6,18 @@ import TagType from '../../component/tag';
 import axios from "../../utils/axios";
 
 class Detail extends Component {
-  // constructor(props){
-  //   super(props);
-  //   const nowId = this.props.match.params.id;
-  //   this.getBaseData(nowId);
-  // }
+  constructor(props){
+    super(props);
+    const nowId = this.props.match.params.id;
+    this.getBaseData(nowId);
+  }
   getBaseData(id){
-    console.log(id);
     this.props.dispatch((dispatch) => {
       dispatch({
         type:"DETAILS_UPDATE"
       });
       axios.get(`/topic/${id}`)
         .then((res)=>{
-          console.log(res);
           dispatch({
             type: 'DETAILS_UPDATE_SUCCESS',
             data: res.data.data,
@@ -33,10 +31,6 @@ class Detail extends Component {
         })
     });
   }
-  componentWillMount() {
-    const nowId = this.props.match.params.id;
-    this.getBaseData(nowId);
-  }
   shouldComponentUpdate(nextProps){
     let nowId = this.props.match.params.id;
     let nextId = nextProps.match.params.id;
@@ -48,7 +42,6 @@ class Detail extends Component {
   }
   render() {
     const { loading, data } = this.props;
-    console.log(data);
     const title = (<div>
       <h1>{data.title}</h1>
       <div style={{
@@ -119,6 +112,3 @@ class Detail extends Component {
 
 export default connect(state => (state.details))(Detail);
 
-// 疑问：
-// 1、为什么执行两次？
-// 2、翻页bug
